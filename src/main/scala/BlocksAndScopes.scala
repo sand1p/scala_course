@@ -8,7 +8,19 @@ object BlocksAndScopes {
   // we want to avoid namespace pollution
 
   // blocks are limited by braces
+  def main(args: Array[String]): Unit = {
 
-  
 
+    val x = 0
+
+    def f(y: Int): Int = y + 1
+
+
+    val result = {
+      val x = f(3)
+      x * x
+    } + x
+    println(result)
+
+  }
 }
